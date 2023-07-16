@@ -1,3 +1,3 @@
-(lang dune 1.4)
+(lang dune 3.9)
 (name charrua)
 (using menhir 2.0)
