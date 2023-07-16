@@ -16,7 +16,7 @@ end
 module No_net = struct
   type error = Mirage_net.Net.error
   let pp_error = Mirage_net.Net.pp_error
-  type stats = Mirage_net.stats
+  type _stats = Mirage_net.stats
   type t = { mac : Macaddr.t; mutable packets : Cstruct.t list }
   let disconnect _ = Lwt.return_unit
   let write t ~size fillf =

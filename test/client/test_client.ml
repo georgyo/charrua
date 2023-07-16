@@ -1,5 +1,3 @@
-let cstruct = Alcotest.of_pp Cstruct.hexdump_pp
-
 let msgtype =
   let module M = struct
     type t = Dhcp_wire.msgtype

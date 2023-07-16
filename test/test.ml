@@ -25,10 +25,10 @@ let verbose = (Array.length Sys.argv) = 2 && Sys.argv.(1) = "-v"
 let tty_out = Unix.isatty Unix.stdout && Unix.getenv "TERM" <> "dumb"
 let colored_or_not cfmt fmt =
   if tty_out then (Printf.sprintf cfmt) else (Printf.sprintf fmt)
-let red fmt    = colored_or_not ("\027[31m"^^fmt^^"\027[m") fmt
-let green fmt  = colored_or_not ("\027[32m"^^fmt^^"\027[m") fmt
+let _red fmt    = colored_or_not ("\027[31m"^^fmt^^"\027[m") fmt
+let _green fmt  = colored_or_not ("\027[32m"^^fmt^^"\027[m") fmt
 let yellow fmt = colored_or_not ("\027[33m"^^fmt^^"\027[m") fmt
-let blue fmt   = colored_or_not ("\027[36m"^^fmt^^"\027[m") fmt
+let _blue fmt   = colored_or_not ("\027[36m"^^fmt^^"\027[m") fmt
 
 let ip_t = Ipaddr.V4.of_string_exn "192.168.1.1"
 let ip2_t = Ipaddr.V4.of_string_exn "192.168.1.2"
